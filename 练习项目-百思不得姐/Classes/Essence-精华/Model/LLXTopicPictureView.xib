@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LLXTopicPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="325"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-wf-Ael" userLabel="占位图片">
+                    <rect key="frame" x="50" y="40" width="296" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="n7Z-YM-pnV"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-TF-GGe" userLabel="网络图片">
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="325"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bii-Bf-NXz" userLabel="查看大图">
+                    <rect key="frame" x="0.0" y="282" width="396" height="43"/>
+                    <state key="normal" title="Button" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="DOY-gb-PVm" userLabel="GIF标识">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Am2-Sv-AVd"/>
+                        <constraint firstAttribute="width" constant="31" id="pdV-uZ-iir"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-T9-yRV" customClass="LLXProgressView">
+                    <rect key="frame" x="148" y="113" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="TKJ-2u-c6o"/>
+                        <constraint firstAttribute="height" constant="100" id="Z4W-BV-fAF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PCc-TF-GGe" secondAttribute="bottom" id="0hq-My-8E4"/>
+                <constraint firstAttribute="bottom" secondItem="Bii-Bf-NXz" secondAttribute="bottom" id="Akp-Hq-fat"/>
+                <constraint firstItem="DOY-gb-PVm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KCX-sy-P8V"/>
+                <constraint firstItem="PCc-TF-GGe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LOx-4i-LTt"/>
+                <constraint firstItem="DOY-gb-PVm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ldx-yn-q8P"/>
+                <constraint firstItem="h5w-T9-yRV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TyB-Sc-cXP"/>
+                <constraint firstAttribute="trailing" secondItem="Bii-Bf-NXz" secondAttribute="trailing" id="bAj-Hj-YRr"/>
+                <constraint firstItem="w4j-wf-Ael" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="dJA-rU-U8O"/>
+                <constraint firstAttribute="trailing" secondItem="PCc-TF-GGe" secondAttribute="trailing" id="j4k-tt-Jax"/>
+                <constraint firstItem="PCc-TF-GGe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jeq-nX-xT7"/>
+                <constraint firstItem="h5w-T9-yRV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lK2-9q-O15"/>
+                <constraint firstAttribute="trailing" secondItem="w4j-wf-Ael" secondAttribute="trailing" constant="50" id="mVC-dq-scI"/>
+                <constraint firstItem="w4j-wf-Ael" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="q5O-oc-L2Y"/>
+                <constraint firstItem="Bii-Bf-NXz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w5h-lS-P5T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifView" destination="DOY-gb-PVm" id="b79-W3-dag"/>
+                <outlet property="imageView" destination="PCc-TF-GGe" id="1gr-GO-koe"/>
+                <outlet property="progressView" destination="h5w-T9-yRV" id="iqM-0G-tia"/>
+                <outlet property="seeBigButton" destination="Bii-Bf-NXz" id="3KZ-0y-V9x"/>
+            </connections>
+            <point key="canvasLocation" x="735" y="-472.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>
