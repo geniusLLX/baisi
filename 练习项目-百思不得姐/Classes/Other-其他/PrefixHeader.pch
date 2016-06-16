@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  练习项目-百思不得姐
+//
+//  Created by 刘大大 on 16/5/10.
+//  Copyright © 2016年 GeniusLiu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIView+LLXExtension.h"
+#import "UIBarButtonItem+LLXExtension.h"
+#import "LLXConstFile.h"
+#import "UIImage+LLXExtension.h"
+#import "UIImageView+LLXExtention.h"
+#ifdef DEBUG
+#define LLXLog(...) NSLog(__VA_ARGS__)
+#else
+#define LLXLog(...)
+#endif
+
+#define LLXLogFunc LLXLog(@"%s", __func__)
+
+#define LLXRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define LLXGlobelColor LLXRGBColor(223, 223, 223)
+
+#define LLXScreenW [UIScreen mainScreen].bounds.size.width
+#define LLXScreenH [UIScreen mainScreen].bounds.size.height
+#endif /* PrefixHeader_pch */

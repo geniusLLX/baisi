@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LLXAddTagToolbar">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av7-oL-Y9a">
+                    <rect key="frame" x="0.0" y="111" width="312" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLP-vL-VpG">
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="JSx-26-Uh6"/>
+                                <constraint firstAttribute="height" constant="35" id="cH2-W1-wgy"/>
+                            </constraints>
+                            <state key="normal" image="post-@"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-Dh-ESJ">
+                            <rect key="frame" x="35" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="BCb-hr-6s9"/>
+                                <constraint firstAttribute="width" constant="35" id="bhn-Im-Fql"/>
+                            </constraints>
+                            <state key="normal" image="post-#"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="CnX-iP-Bc2"/>
+                        <constraint firstItem="TfW-Dh-ESJ" firstAttribute="leading" secondItem="gLP-vL-VpG" secondAttribute="trailing" id="DlT-lb-uzj"/>
+                        <constraint firstAttribute="bottom" secondItem="gLP-vL-VpG" secondAttribute="bottom" id="ONa-l7-MYi"/>
+                        <constraint firstItem="gLP-vL-VpG" firstAttribute="leading" secondItem="av7-oL-Y9a" secondAttribute="leading" id="TI2-Ng-trx"/>
+                        <constraint firstAttribute="bottom" secondItem="TfW-Dh-ESJ" secondAttribute="bottom" id="gT4-Z3-tfQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBt-4P-m4u">
+                    <rect key="frame" x="5" y="0.0" width="302" height="101"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xBt-4P-m4u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6UA-IN-lX3"/>
+                <constraint firstAttribute="bottom" secondItem="av7-oL-Y9a" secondAttribute="bottom" id="DGg-jR-BVj"/>
+                <constraint firstItem="av7-oL-Y9a" firstAttribute="top" secondItem="xBt-4P-m4u" secondAttribute="bottom" constant="10" id="GI3-XD-f65"/>
+                <constraint firstItem="av7-oL-Y9a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Suh-GI-Qgb"/>
+                <constraint firstItem="xBt-4P-m4u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="hag-Fx-NHR"/>
+                <constraint firstAttribute="trailing" secondItem="av7-oL-Y9a" secondAttribute="trailing" id="phd-Au-P2z"/>
+                <constraint firstAttribute="trailing" secondItem="xBt-4P-m4u" secondAttribute="trailing" constant="5" id="waf-0v-gQY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="TopView" destination="xBt-4P-m4u" id="4Tg-Wk-EgU"/>
+            </connections>
+            <point key="canvasLocation" x="203" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="post-#" width="19" height="19"/>
+        <image name="post-@" width="19" height="19"/>
+    </resources>
+</document>
